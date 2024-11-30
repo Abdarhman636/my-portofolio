@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+:root {
+  --white: #E8E8E8;
+  --black: #1D1D1D;
+  --gray: #8a8a8a
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Marcellus;
+  margin: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+     padding: 0;
+     margin: 0;
+     font-family: Marcellus;
+     background-color: var(--black);
+     color: var(--white);
+}
+
+.cursos-point {
+  width: 5px;
+  height: 5px;
+  background-color: var(--white);
+}
+
+.cursos-outline {
+  width: 50px;
+  height: 50px;
+  border: solid 2px var(--white);
+}
+
+.cursos-point, .cursos-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cover {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: -100vw;
+  z-index: 1000;
+}
+
+.transition.slide .cover1 {
+  background-color: #2f2f2f;
+  animation: slide 0.3s ease-in-out forwards;
+}
+.transition.slide .cover2 {
+  background-color: #2f2f2f;
+  animation: slide 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+.transition.slide .cover3 {
+  background-color: var(--white);
+  animation: slide 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes slide {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes fadde {
+  from {
+    translate: 0 50px;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0px;
+    opacity: 1;
+  }
+}
+
+ol, ul {
+list-style: none;
+}
+
+.white {
+  color: var(--white);
+}
+
+.black {
+  color: var(--black);
+}
+
+.gray {
+     color: #8a8a8a;
+}
+
+.myContainer {
+     max-width: 80%;
+     margin: auto;
+}
+  
+main {
+  /* height: calc(100vh - 130px); */
+  animation: fadde 0.9s ease-in-out forwards;
+}
+/* 
+footer {
+  position: absolute;
+  bottom: 25px;
+} */

@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+:root {
+  --white: #E8E8E8;
+  --black: #1D1D1D;
+  --gray: #2f2f2f;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Marcellus;
+  /* font-weight: 900; */
+  margin: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+     padding: 0;
+     margin: 0;
+     font-family: Marcellus;
+     background-color: var(--white);
+     color: var(--black);
+     cursor: none;
+}
+
+body {
+  /* background-image: url(../assets/texture.jpg); */
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  background-color: transparent;
+}
+
+.cover {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: -100vw;
+  z-index: 1000;
+}
+
+.cursos-point {
+  width: 5px;
+  height: 5px;
+  background-color: var(--gray);
+}
+
+.cursos-outline {
+  width: 50px;
+  height: 50px;
+  border: solid 2px var(--gray);
+}
+
+.cursos-point, .cursos-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.transition.slide .cover1 {
+  background-color: var(--gray);
+  animation: slide 0.3s ease-in-out forwards;
+}
+.transition.slide .cover2 {
+  background-color: var(--gray);
+  animation: slide 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+.transition.slide .cover3 {
+  background-color: var(--white);
+  animation: slide 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes slide {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes fadde {
+  from {
+    translate: 0 50px;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0px;
+    opacity: 1;
+  }
+}
+
+.container {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+ol, ul {
+list-style: none;
+}
+
+.white {
+  color: var(--white);
+}
+
+.black {
+  color: var(--black);
+}
+
+.gray {
+  color: var(--gray);
+}
+
+  
+main {
+  /* margin-top: 100px; */
+  display: flex;
+  flex: 2;
+  flex-grow: 1;
+  opacity: 0;
+  animation: fadde 0.9s ease-in-out forwards;
+}
+
+.summery div #abdulrahamn{
+  width: 400px;
+  display: none;
+  position: absolute;
+  right: 2%;
+  top: 4%;
+  animation: mainPhoto 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.summery div #designer {
+  width: 400px;
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 22%;
+  animation: mainPhoto 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.summery div #frontend {
+  width: 400px;
+  display: none;
+  position: absolute;
+  right: 7%;
+  bottom: 20%;
+  animation: mainPhoto 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.summery div #content {
+  width: 250px;
+  display: none;
+  position: absolute;
+  right: 8%;
+  bottom: 2%;
+  animation: mainPhoto 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#abdulrahamnDiv:hover #abdulrahamn {
+  display: inline;
+}
+
+#designerDiv:hover #designer {
+  display: inline;
+}
+
+#frontendDiv:hover #frontend {
+  display: inline;
+}
+
+#contentDiv:hover #content {
+  display: inline;
+}
+
+@keyframes mainPhoto {
+  from {
+    translate: -30px 0;
+    opacity: 0;
+  }
+  to {
+    translate: 0 0px;
+    opacity: 1;
+  }
+}
+
+.contact {
+  background-color: var(--black);
+}
+
+/* -------------------------------------------------------- work ---------------------------- */
+
+.work-main {
+  scrollbar-width: none;
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  height: 80%;
+}
+
+.work-main section {
+  height: 80%;
+  overflow-y: scroll;
+}
+
+section::-webkit-scrollbar {
+  width: 0;
+}
+
+section {
+  scrollbar-width: none;
+}
+
+.work {
+  border-bottom: var(--black) solid 2px;
+}
+
+.work span a {
+  text-decoration: none;
+}
+
+
+/* -------------------------------------------------------- contact ---------------------------- */
+.contact-main {
+  flex: 2 ;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.contact-main img {
+  height: 100%;
+}
+
+form, .address {
+     flex: 1;
+}
+
+.address div {
+     width: 200px;
+}
+
+input, textarea {
+     border: none;
+     border-bottom: 1px solid var(--gray);
+     width: 100%;
+}
+
+form button {
+  background-color: var(--black);
+}

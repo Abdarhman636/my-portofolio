@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+:root {
+  --white: #E8E8E8;
+  --black: #1D1D1D;
+  --gray: #2f2f2f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Marcellus;
+  margin: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+     padding: 0;
+     margin: 0;
+     font-family: Marcellus;
+     background-color: var(--white);
+     color: var(--black);
+}
+
+.cursos-point {
+  width: 5px;
+  height: 5px;
+  background-color: var(--gray);
+}
+
+.cursos-outline {
+  width: 50px;
+  height: 50px;
+  border: solid 2px var(--gray);
+}
+
+.cursos-point, .cursos-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+ol, ul {
+list-style: none;
+}
+
+.white {
+  color: var(--white);
+}
+
+.black {
+  color: var(--black);
+}
+
+.gray {
+     color: var(--gray);
+}
+
+.container {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+  
+.contact-main {
+  flex: 2;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+
+form, .address {
+     flex: 1;
+}
+
+.address div {
+     width: 200px;
+}
+
+input, textarea {
+     border: none;
+     border-bottom: 1px solid #8a8a8a;
+     width: 100%;
+}
+
+form button {
+  background-color: var(--black);
+}
+
+/* footer {
+  position: absolute;
+  bottom: 25px;
+} */
